@@ -2,6 +2,8 @@
 # Reads (Linux) battery statistics, and returns various monitors
 # Arguments are iterated over, and monitors are returned in the order specified
 # Multiple monitors may be returned
+# 
+# Sampe usable 'battery.pl -m -p -t'
 open(my $sys_charging, "<", "/sys/class/power_supply/BAT0/status");
 open(my $sys_full, "<", "/sys/class/power_supply/BAT0/energy_full");
 open(my $sys_now, "<", "/sys/class/power_supply/BAT0/energy_now");
