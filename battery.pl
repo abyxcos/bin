@@ -35,9 +35,9 @@ sub battery_percent {
 sub battery_meter {
 	if ($charging eq "Discharging") {
 		my $meter = "[";
-		for (my $i=4; $i>0; $i--) {
-			if ($current/$capacity > 0.45/$i) {
-				if ($current/$capacity > 0.95/$i) {
+		for (my $i=0; $i<4; $i++) {
+			if ($current/$capacity > $i*0.26) {
+				if ($current/$capacity > $i*0.25+0.13) {
 					$meter .= ":";
 				} else {
 					$meter .= ".";

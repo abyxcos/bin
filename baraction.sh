@@ -18,7 +18,7 @@ while :; do
 		then PLAYING=`mpc -f "%title% - %album% - %artist%" current | sed -r 's/(.{0,25}).*? - (.*) - (.*)/\1 - \2 - \3/'`
 	fi
 
-	echo -e "$DATE || $SSID || $BATTERY || $PLAYING"
+	echo -e "$BATTERY || $SSID || $DATE || $PLAYING"
 
 	sleep $SLEEP_SEC
 done
